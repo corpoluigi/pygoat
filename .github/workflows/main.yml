@@ -40,7 +40,8 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-docker-action@v4.3.0
       with: 
-        docker_version: '24.0.9'
+        version: default
+        channel: stable
 
     - name: Build Docker Image
       run: docker build -f Dockerfile -t myapp:latest .
